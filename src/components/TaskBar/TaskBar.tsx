@@ -13,6 +13,14 @@ const TaskBar : React.FC = () => {
                 </div>
                 <div className="">
                     Language :
+                    <div>
+                        <select>
+                            <option>C</option>
+                            <option>C++</option>
+                            <option>Swift</option>
+                            <option>Python</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>

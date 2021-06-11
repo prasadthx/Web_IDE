@@ -1,4 +1,39 @@
 .CodePlayground{
     flex:0.6;
-    overflow-y: scroll;
+    overflow: auto;
+}
+
+.editor{
+    resize: none;
+    padding: 1em;
+    margin: 0em 0;
+    overflow: auto;
+    border-radius: 0em;
+
+    padding: 1em;
+    overflow: auto;
+    border: .3em solid hsl(30, 20%, 40%);
+    border-radius: .5em;
+    box-shadow: 1px 1px 0.5em black inset;
+
+    background: hsl(30, 20%, 25%);
+    color: transparent;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 1em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    hyphens: none;
+    caret-color: red;
+    background-color: transparent;
+    color: transparent;
+    z-index: 1;
+
 }

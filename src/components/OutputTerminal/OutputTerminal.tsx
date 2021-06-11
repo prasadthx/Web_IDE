@@ -1,20 +1,14 @@
 import './OutputTerminal.css'
 import React from "react";
-import { ResizableBox, Resizable } from 'react-resizable';
-import {stat} from "fs";
+import {Resizable} from 're-resizable';
+
 
 const OutputTerminal : React.FC = () => {
-    let state = {
-        width: 200,
-        height: 200,
-    };
-    let onResize = (event: any, {element, size, handle}: any) => {
-        state.width = size.width;
-        state.height = size.height;
-    };
     return(
-        <Resizable height={state.height} width={state.width} onResize={onResize}>
-            <div className="OutputTerminal">
+        <Resizable
+            className="OutputTerminal border-t-4 border-black"
+            enable={{ top:true, right:false, bottom:false, left:false, topRight:false, bottomRight:false, bottomLeft:false, topLeft:false }}>
+            <div>
                 Output Terminal
             </div>
         </Resizable>
