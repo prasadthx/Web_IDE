@@ -1,0 +1,5 @@
+.OutputTerminal{
+    flex: 0.3;
+    background: midnightblue;
+    resize: vertical;
+}
