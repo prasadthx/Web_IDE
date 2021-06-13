@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <TaskBar setLanguage={setLanguage} setTheme={setTheme}/>
-      <CodePlayground setCode={setCode}/>
+      <CodePlayground setCode={setCode} language={language} theme={theme}/>
       <OutputTerminal code={code}/>
     </div>
   );

@@ -1,26 +1,9 @@
 import './TaskBar.css';
 import React from "react";
+import {languages, themes} from "./optionData";
 
 const TaskBar = (props:any) => {
 
-    const languages = [
-        {
-            label: "Python",
-            value: "Python",
-        },
-        {
-            label: "C",
-            value: "C",
-        },
-        {
-            label: "C++",
-            value: "C++",
-        },
-        {
-            label: "Swift",
-            value: "Swift",
-        },
-    ];
     return (
         <div className="TaskBar">
             <div className="flex justify-between">
@@ -30,7 +13,7 @@ const TaskBar = (props:any) => {
                     </div>
                     <div>
                         <select className="rounded-3xl bg-black px-3 languageSelection" onChange={(e) => props.setTheme(e.target.value)}>
-                            {languages.map((option) => (
+                            {themes.map((option) => (
                                 <option value={option.value}>{option.label}</option>
                             ))}
                         </select>

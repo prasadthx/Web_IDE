@@ -32,14 +32,14 @@ const OutputTerminal = (props: any) => {
     }, [props.code])
     return(
         <Resizable
-            className="OutputTerminal border-t-4 border-black"
+            className="OutputTerminal border-t-4 border-black overflow-auto"
             enable={{ top:true, right:false, bottom:false, left:false, topRight:false, bottomRight:false, bottomLeft:false, topLeft:false }}>
             <div className="flex flex-col">
                 <div className="bg-black text-white text-sm py-1 border-b-2 border-red-900">
                     Terminal
                 </div>
-                <div>
-                    <Console logs={logs} variant="dark" />
+                <div className="">
+                    <Console logs={logs} variant="dark"/>
                 </div>
             </div>
         </Resizable>
