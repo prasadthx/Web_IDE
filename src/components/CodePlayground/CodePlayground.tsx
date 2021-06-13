@@ -1,15 +1,17 @@
 import './CodePlayground.css'
-import React, {useRef, useState} from "react";
+import React, {useEffect, useState} from "react";
 import { CodeDisplay } from "./CodeDisplay/CodeDisplay";
 
 
-const CodePlayground:React.FC = () => {
+const CodePlayground = (props:any) => {
     let [value, setValue] = useState("");
     // @ts-ignore
     return(
         <div className="CodePlayground relative">
             <textarea     className="absolute top-0 bg-transparent w-full h-full editor" onChange={e => setValue(e.target.value)} onScroll={e => scrollSync()}></textarea>
             <CodeDisplay  className="absolute top-0 w-full h-full" code={value}/>
+            <button className="absolute bottom-5 right-10 bg-red-800 rounded-xl py-2 px-5 text-white font-bold z-30"
+                    onClick={(e)=>props.setCode(value)}>RUN</button>
         </div>
     )
 };
